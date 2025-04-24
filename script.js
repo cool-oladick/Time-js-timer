@@ -18,7 +18,12 @@ function timer() {
     let minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((ms % (1000 * 60)) / 1000);
 
-    timerElement.innerHTML = `Залишилось: Днів ${days}, Годин: ${hours}, Хвилин: ${minutes}, Секунд: ${seconds}`;
+    timerElement.innerHTML = `<h4>Залишилось:</h4><br> <table>
+    <tr><th><span>Днів:</th>  <td> ${days}</span></td></tr> 
+    <tr><th><span>Годин:</th> <td> ${hours}</span,</td></tr>
+    <tr><th><span>Хвилин:</th> <td>${minutes}</span></td></tr> 
+    <tr><th><span>Секунд:</th> <td>${seconds}</span></td></tr>
+    </table>`;
 }
 
 const timerInterval = setInterval(timer, 1000);
